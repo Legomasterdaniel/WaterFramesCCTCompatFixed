@@ -99,7 +99,7 @@ public class DisplayTilePeripheral implements IPeripheral {
 
     @LuaFunction(mainThread = true)
     public final void setVolume(int volume) {
-        DisplayNetwork.sendClient(new VolumePacket(Tile.getBlockPos(), Tile.data.volume, true), Tile);
+        DisplayNetwork.sendClient(new VolumePacket(Tile.getBlockPos(), volume, true), Tile);
     }
 
     @LuaFunction(mainThread = true)
